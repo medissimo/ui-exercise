@@ -6,6 +6,40 @@
     transition: all 0.5s ease;
 }
 
+.primary-wrapper.toggled {
+    padding-right: 30%;
+}
+
+
+/* Navbar Styles */
+
+.sidebar-toggle {
+    margin-left: 30px;
+    position: relative;
+    display: block;
+    padding: 15px;
+    color: #999999;
+}
+
+.sidebar-toggle:active,
+.sidebar-toggle:focus {
+    color: #999999;
+    text-decoration: none;
+} 
+
+.sidebar-toggle:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar-collapse {
+    width: 100%;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #ffffff;
+}
+
 
 /* Content Area Styles */
 
@@ -18,6 +52,11 @@
     transition: all 0.5s ease;
 }
 
+.primary-wrapper.toggled .page-content-wrapper {
+    position: absolute;
+    margin-left: 0;
+}
+
 .page-content-container {
         padding: 50px 0;
     }
@@ -27,17 +66,22 @@
 
 .sidebar-wrapper {
     position: fixed;
-	width: 30%;
-    right: -30%;
+    right: 0;
     z-index: 1000;
     overflow-y: unset;
     margin-right: 0;
+    width: 0;
     height: 100%;
-    background: #000000;
+    background: #000;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+.primary-wrapper.toggled .sidebar-wrapper {
+    right: 0;
+    width: 100%;
 }
 
 
@@ -77,6 +121,10 @@
         padding: 0;
     }
 
+    .page-content-container {
+        padding: 50px 0;
+    }
+
     .navbar {
         padding: 0 15px;
     }
@@ -84,20 +132,29 @@
     .primary-wrapper {
         padding-right: 0;
     }
-	
-	.sidebar-wrapper {
-		right: 0;
-	}
-	
-	.page-content-container {
-        padding: 50px 0;
+
+    .primary-wrapper.toggled {
+        padding-right: 0;
+    }
+
+    .sidebar-wrapper {
+        margin-right: -30%;
+        width: 0;
+    }
+
+    .primary-wrapper.toggled .sidebar-wrapper {
+        right: 30%;
+        width: 30%;
     }
 
    .page-content-wrapper {
-	    width: 70%;
         padding: 20px;
         height: 100%;
         position: relative;
     }
 
+    .primary-wrapper.toggled .page-content-wrapper {
+        margin-left: 0;
+        width: 70%;
+    }
 }
