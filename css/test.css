@@ -11,7 +11,7 @@
 
 .page-content-wrapper {
     padding: 15px;
-    width: 70%;
+    width: 100%;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -38,6 +38,25 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+
+/* Bootstrap overrides */
+
+.panel,
+.panel-body,
+.panel-footer {
+    border: none;
+    box-shadow: none;
+}
+
+.panel-body {
+    background-color: #cccccc;
+    height: 200px
+}
+
+.panel-footer {
+    background-color: #ffffff;
 }
 
 
@@ -69,8 +88,13 @@
 	.sidebar-wrapper {
 		right: 0;
 	}
+	
+	.page-content-container {
+        padding: 50px 0;
+    }
 
    .page-content-wrapper {
+	    width: 70%;
         padding: 20px;
         height: 100%;
         position: relative;
